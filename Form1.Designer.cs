@@ -129,7 +129,7 @@
             // 
             // btnRemoveSharedFolder
             // 
-            this.btnRemoveSharedFolder.Location = new System.Drawing.Point(426, 52);
+            this.btnRemoveSharedFolder.Location = new System.Drawing.Point(426, 58);
             this.btnRemoveSharedFolder.Name = "btnRemoveSharedFolder";
             this.btnRemoveSharedFolder.Size = new System.Drawing.Size(27, 29);
             this.btnRemoveSharedFolder.TabIndex = 7;
