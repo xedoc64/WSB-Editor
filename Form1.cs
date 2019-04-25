@@ -35,11 +35,6 @@ namespace WSB_Editor
             }
         }
 
-        private void Settings_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnAddSharedFolder_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fldDialog = new FolderBrowserDialog();
@@ -63,6 +58,9 @@ namespace WSB_Editor
            
         }
 
+        /// <summary>
+        /// reset all controls
+        /// </summary>
         private void ClearAllControls()
         {
             chkGPUSharing.Checked = false;
@@ -104,6 +102,11 @@ namespace WSB_Editor
             }
         }
 
+        /// <summary>
+        /// Serialize all settings from the window into an xml
+        /// </summary>
+        /// <param name="FileName">Full name (incl.) path of the target file</param>
+        /// <returns></returns>
         private bool WriteToWSB(string FileName)
         {
             try
@@ -172,6 +175,11 @@ namespace WSB_Editor
             }
         }
 
+        /// <summary>
+        /// Deserialize all settings from the xml and set the gui to correspond with the xml
+        /// </summary>
+        /// <param name="FileName">Full name (incl. path) of the source file</param>
+        /// <returns></returns>
         private bool ReadFromWSB(string FileName)
         {
 

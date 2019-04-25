@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Xml;
 using System.Xml.Serialization;
 
+
 namespace WSB_Editor
 {
+    /// <summary>
+    /// Configuration node
+    /// </summary>
     [XmlRoot("Configuration")]
     public class Configuration
     {
@@ -19,19 +19,27 @@ namespace WSB_Editor
         public LogonCommand logonCommand;
     }
 
+    /// <summary>
+    /// MappedFolders node
+    /// </summary>
     public class MappedFolders
     {
         [XmlElement("MappedFolder")]
         public List<MappedFolder> mappedFolder {get; set; }
     }
 
+    /// <summary>
+    /// MappedFolder item
+    /// </summary>
     public class MappedFolder
     {
         public string HostFolder { get; set; }
         public string ReadOnly { get; set; }
     }
 
-
+    /// <summary>
+    /// LogonCommand node
+    /// </summary>
     public class LogonCommand
     {
         [XmlElement("Command")]
