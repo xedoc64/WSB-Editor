@@ -292,5 +292,9 @@ namespace WSB_Editor
             }
         }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

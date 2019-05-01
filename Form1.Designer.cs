@@ -47,14 +47,18 @@
             this.btnRemoveCommand = new System.Windows.Forms.Button();
             this.grpSharedFolders = new System.Windows.Forms.GroupBox();
             this.grpLogonCommand = new System.Windows.Forms.GroupBox();
+            this.menuMain = new System.Windows.Forms.MenuStrip();
+            this.fileToolStrip = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stsStatus.SuspendLayout();
             this.grpSharedFolders.SuspendLayout();
             this.grpLogonCommand.SuspendLayout();
+            this.menuMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnLoadWSB
             // 
-            this.btnLoadWSB.Location = new System.Drawing.Point(12, 12);
+            this.btnLoadWSB.Location = new System.Drawing.Point(12, 32);
             this.btnLoadWSB.Name = "btnLoadWSB";
             this.btnLoadWSB.Size = new System.Drawing.Size(75, 23);
             this.btnLoadWSB.TabIndex = 0;
@@ -64,7 +68,7 @@
             // 
             // btnSaveWSB
             // 
-            this.btnSaveWSB.Location = new System.Drawing.Point(126, 12);
+            this.btnSaveWSB.Location = new System.Drawing.Point(126, 32);
             this.btnSaveWSB.Name = "btnSaveWSB";
             this.btnSaveWSB.Size = new System.Drawing.Size(75, 23);
             this.btnSaveWSB.TabIndex = 1;
@@ -75,7 +79,7 @@
             // chkGPUSharing
             // 
             this.chkGPUSharing.AutoSize = true;
-            this.chkGPUSharing.Location = new System.Drawing.Point(12, 51);
+            this.chkGPUSharing.Location = new System.Drawing.Point(12, 71);
             this.chkGPUSharing.Name = "chkGPUSharing";
             this.chkGPUSharing.Size = new System.Drawing.Size(122, 17);
             this.chkGPUSharing.TabIndex = 2;
@@ -85,7 +89,7 @@
             // chkNetwork
             // 
             this.chkNetwork.AutoSize = true;
-            this.chkNetwork.Location = new System.Drawing.Point(12, 74);
+            this.chkNetwork.Location = new System.Drawing.Point(12, 94);
             this.chkNetwork.Name = "chkNetwork";
             this.chkNetwork.Size = new System.Drawing.Size(100, 17);
             this.chkNetwork.TabIndex = 3;
@@ -119,21 +123,21 @@
             // 
             // btnAddSharedFolder
             // 
-            this.btnAddSharedFolder.Location = new System.Drawing.Point(426, 23);
+            this.btnAddSharedFolder.Location = new System.Drawing.Point(6, 147);
             this.btnAddSharedFolder.Name = "btnAddSharedFolder";
-            this.btnAddSharedFolder.Size = new System.Drawing.Size(27, 29);
+            this.btnAddSharedFolder.Size = new System.Drawing.Size(94, 23);
             this.btnAddSharedFolder.TabIndex = 6;
-            this.btnAddSharedFolder.Text = "+";
+            this.btnAddSharedFolder.Text = "Add folder";
             this.btnAddSharedFolder.UseVisualStyleBackColor = true;
             this.btnAddSharedFolder.Click += new System.EventHandler(this.btnAddSharedFolder_Click);
             // 
             // btnRemoveSharedFolder
             // 
-            this.btnRemoveSharedFolder.Location = new System.Drawing.Point(426, 58);
+            this.btnRemoveSharedFolder.Location = new System.Drawing.Point(114, 147);
             this.btnRemoveSharedFolder.Name = "btnRemoveSharedFolder";
-            this.btnRemoveSharedFolder.Size = new System.Drawing.Size(27, 29);
+            this.btnRemoveSharedFolder.Size = new System.Drawing.Size(90, 23);
             this.btnRemoveSharedFolder.TabIndex = 7;
-            this.btnRemoveSharedFolder.Text = "-";
+            this.btnRemoveSharedFolder.Text = "Remove folder";
             this.btnRemoveSharedFolder.UseVisualStyleBackColor = true;
             this.btnRemoveSharedFolder.Click += new System.EventHandler(this.btnRemoveSharedFolder_Click);
             // 
@@ -158,7 +162,7 @@
             // 
             this.stsStatus.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stslblStatus});
-            this.stsStatus.Location = new System.Drawing.Point(0, 550);
+            this.stsStatus.Location = new System.Drawing.Point(0, 578);
             this.stsStatus.Name = "stsStatus";
             this.stsStatus.Size = new System.Drawing.Size(541, 22);
             this.stsStatus.TabIndex = 11;
@@ -179,7 +183,7 @@
             this.lstCommand.Name = "lstCommand";
             this.lstCommand.Scrollable = false;
             this.lstCommand.Size = new System.Drawing.Size(414, 118);
-            this.lstCommand.TabIndex = 12;
+            this.lstCommand.TabIndex = 8;
             this.lstCommand.UseCompatibleStateImageBehavior = false;
             this.lstCommand.View = System.Windows.Forms.View.Details;
             // 
@@ -193,7 +197,7 @@
             this.btnAddCommand.Location = new System.Drawing.Point(6, 184);
             this.btnAddCommand.Name = "btnAddCommand";
             this.btnAddCommand.Size = new System.Drawing.Size(90, 23);
-            this.btnAddCommand.TabIndex = 13;
+            this.btnAddCommand.TabIndex = 10;
             this.btnAddCommand.Text = "Add command";
             this.btnAddCommand.UseVisualStyleBackColor = true;
             this.btnAddCommand.Click += new System.EventHandler(this.btnAddCommand_Click);
@@ -203,7 +207,7 @@
             this.btnRemoveCommand.Location = new System.Drawing.Point(108, 184);
             this.btnRemoveCommand.Name = "btnRemoveCommand";
             this.btnRemoveCommand.Size = new System.Drawing.Size(90, 23);
-            this.btnRemoveCommand.TabIndex = 14;
+            this.btnRemoveCommand.TabIndex = 11;
             this.btnRemoveCommand.Text = "Remove Command";
             this.btnRemoveCommand.UseVisualStyleBackColor = true;
             this.btnRemoveCommand.Click += new System.EventHandler(this.btnRemoveCommand_Click);
@@ -213,7 +217,7 @@
             this.grpSharedFolders.Controls.Add(this.lstFolders);
             this.grpSharedFolders.Controls.Add(this.btnRemoveSharedFolder);
             this.grpSharedFolders.Controls.Add(this.btnAddSharedFolder);
-            this.grpSharedFolders.Location = new System.Drawing.Point(12, 97);
+            this.grpSharedFolders.Location = new System.Drawing.Point(12, 117);
             this.grpSharedFolders.Name = "grpSharedFolders";
             this.grpSharedFolders.Size = new System.Drawing.Size(500, 184);
             this.grpSharedFolders.TabIndex = 15;
@@ -227,25 +231,52 @@
             this.grpLogonCommand.Controls.Add(this.btnRemoveCommand);
             this.grpLogonCommand.Controls.Add(this.txtCommand);
             this.grpLogonCommand.Controls.Add(this.btnAddCommand);
-            this.grpLogonCommand.Location = new System.Drawing.Point(18, 303);
+            this.grpLogonCommand.Location = new System.Drawing.Point(18, 323);
             this.grpLogonCommand.Name = "grpLogonCommand";
             this.grpLogonCommand.Size = new System.Drawing.Size(494, 244);
             this.grpLogonCommand.TabIndex = 16;
             this.grpLogonCommand.TabStop = false;
             this.grpLogonCommand.Text = "Logon Commands";
             // 
+            // menuMain
+            // 
+            this.menuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStrip});
+            this.menuMain.Location = new System.Drawing.Point(0, 0);
+            this.menuMain.Name = "menuMain";
+            this.menuMain.Size = new System.Drawing.Size(541, 24);
+            this.menuMain.TabIndex = 17;
+            this.menuMain.Text = "menuStrip1";
+            // 
+            // fileToolStrip
+            // 
+            this.fileToolStrip.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileToolStrip.Name = "fileToolStrip";
+            this.fileToolStrip.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStrip.Text = "&File";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Text = "E&xit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(541, 572);
+            this.ClientSize = new System.Drawing.Size(541, 600);
             this.Controls.Add(this.grpLogonCommand);
             this.Controls.Add(this.grpSharedFolders);
             this.Controls.Add(this.stsStatus);
+            this.Controls.Add(this.menuMain);
             this.Controls.Add(this.btnSaveWSB);
             this.Controls.Add(this.btnLoadWSB);
             this.Controls.Add(this.chkGPUSharing);
             this.Controls.Add(this.chkNetwork);
+            this.MainMenuStrip = this.menuMain;
             this.Name = "frmMain";
             this.Text = "WSB-Editor";
             this.stsStatus.ResumeLayout(false);
@@ -253,6 +284,8 @@
             this.grpSharedFolders.ResumeLayout(false);
             this.grpLogonCommand.ResumeLayout(false);
             this.grpLogonCommand.PerformLayout();
+            this.menuMain.ResumeLayout(false);
+            this.menuMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,6 +312,9 @@
         private System.Windows.Forms.Button btnAddCommand;
         private System.Windows.Forms.GroupBox grpSharedFolders;
         private System.Windows.Forms.GroupBox grpLogonCommand;
+        private System.Windows.Forms.MenuStrip menuMain;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStrip;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
     }
 }
 
